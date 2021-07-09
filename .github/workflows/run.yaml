@@ -1,0 +1,22 @@
+on:
+  [push]
+name: Run under GNUstep on Ubuntu 20.10
+jobs:
+  testbuild:
+    name: Building GNUstep
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@master
+      - name: Build GNUstep
+        run: |
+          git clone git@github.com:plaurent/gnustep-build
+          cd gnustep-build/
+          cd ubuntu-20.10-clang-11.0-runtime-2.0/
+          sh ./GNUstep-buildon-ubuntu2010.sh
+
+      - name: Run the project
+        run: |
+            source ~/.bashrc
+            cd src/call-by-meaning-objc
+            make
