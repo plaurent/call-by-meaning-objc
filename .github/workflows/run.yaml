@@ -25,3 +25,5 @@ jobs:
             . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
             cd src/call-by-meaning-objc
             make
+            ls
+            ./CallByMeaningDemo
