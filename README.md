@@ -32,11 +32,21 @@ Objective-C is dynamic enough that to get this working I didn't even need to che
 
 
 
-## Additional fun thoughts / interesting consequences:
+## Thoughts
 
-1. **No more "errors"?** When using call by meaning you don't really have "syntax" errors anymore, only "unknown meaning" and "ambiguous meaning" errors. An ambiguity error could be resolved by the caller having a back-and-forth "dialogue" at runtime, with the receiver(s).
-1. **Composition** You could extend this search functionality to check (in parallel) for compositions of available functions that together would perform a complex operation.
-1. **Relationship to Machine Learning**. This blurs the distinction between code and machine learning.  Effectively, we are finding a function by giving examples -- not much different form learning such a function (i.e., machine learning). It feels a bit like "1-shot learning" or "n-shot" for very small n.
+### No more "errors"?
+
+When using call by meaning you don't really have "syntax" errors anymore, instead you get ["unknown meaning"](https://github.com/plaurent/call-by-meaning-objc/blob/main/src/call-by-meaning-objc/MethodFinder.m#L45) and ["ambiguous meaning"](https://github.com/plaurent/call-by-meaning-objc/blob/main/src/call-by-meaning-objc/MethodFinder.m#L41) exceptions. An ambiguity exception could be resolved by the caller having a back-and-forth "dialogue" at runtime, with the receiver(s), providing more examples until the meaning were no longer ambiguous.
+
+
+### Composition
+
+You could extend this search functionality to check (in parallel) for compositions of available functions that together would perform a more complex operation.  An example of a more complex operation would be capitalizing each letter of the words in a sentence -- what would the search for this look like?
+
+
+### Relationship to Machine Learning
+
+Using Call by Meaning starts to make programming look a bit more like machine learning, blurring the distinction between the two.   Effectively, we are finding a function by giving examples -- not much different form learning such a function (i.e., machine learning). It feels a bit like "1-shot learning" or "n-shot" for very small n.
 
 
 ## References
