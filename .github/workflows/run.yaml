@@ -1,9 +1,9 @@
 on:
   [push]
-name: Run under GNUstep on Ubuntu 20.10
+name: Run Call by Meaning under GNUstep (Ubuntu 20.10)
 jobs:
   testbuild:
-    name: Building GNUstep
+    name: Build GNUstep and run the Call by Meaning Demo
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
