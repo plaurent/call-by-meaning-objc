@@ -21,5 +21,7 @@ jobs:
         shell: bash
         run: |
             source ~/.bashrc
+            cat ~/.bashrc
+            . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
             cd src/call-by-meaning-objc
             make
