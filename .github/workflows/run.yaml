@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@master
       - name: Build GNUstep
         run: |
-          git clone git@github.com:plaurent/gnustep-build
+          git clone https://github.com/plaurent/gnustep-build
           cd gnustep-build/
           cd ubuntu-20.10-clang-11.0-runtime-2.0/
           sh ./GNUstep-buildon-ubuntu2010.sh
