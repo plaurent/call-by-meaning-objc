@@ -17,7 +17,7 @@ jobs:
           chmod +x GNUstep-buildon-ubuntu2010.sh
           ./GNUstep-buildon-ubuntu2010.sh
 
-      - name: Run the project
+      - name: Build and run the Call by Meaning Demo
         shell: bash
         run: |
             source ~/.bashrc
@@ -25,5 +25,4 @@ jobs:
             . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
             cd src/call-by-meaning-objc
             make
-            ls
-            ./CallByMeaningDemo
+            ./obj/CallByMeaningDemo
