@@ -28,6 +28,8 @@ FoundMethod* found_strlen = [finder findMethodThatGiven:@[@"hello world"] produc
 FoundMethod* found_upcase = [finder findMethodThatGiven:@[@"hello world"] producesOutput:@"HELLO WORLD"];
 ```
 
+To see more, check out [src/call-by-meaning-objc/main.m](https://github.com/plaurent/call-by-meaning-objc/blob/main/src/call-by-meaning-objc/main.m).
+
 Objective-C is dynamic enough that to get this working I didn't even need to check method signatures... just call away and catch any exceptions. If you expect multiple functions, you can narrow down to the desired specific function by intersecting the results of multiple "findMethods" calls (each call with a different example given).
 
 
