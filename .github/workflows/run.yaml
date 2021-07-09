@@ -9,6 +9,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@master
       - name: Build GNUstep
+        shell: bash
         run: |
           git clone https://github.com/plaurent/gnustep-build
           cd gnustep-build/
@@ -16,6 +17,7 @@ jobs:
           sh ./GNUstep-buildon-ubuntu2010.sh
 
       - name: Run the project
+        shell: bash
         run: |
             source ~/.bashrc
             cd src/call-by-meaning-objc
