@@ -5,7 +5,7 @@ This repository is a demonstration of a simple form of "call by meaning" using t
 ## Motivation
 
 
-* _"[N]ames are a local convention, and scaling soon obliterates the conventions."_ -- Alan Kay
+* _"[N]ames are a local convention, and scaling soon obliterates the conventions."_ -- Alan Kay (paraphrasing Mark Miller)
 
 * _"There are only two hard things in Computer Science: cache invalidation and naming things."_ -- Phil Karlton
 
